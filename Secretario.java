@@ -18,7 +18,9 @@ public class Secretario extends Empleado {
         this.salario = salario + 0.5 * salario;
     }
 
-    public void imprimirDatos() {
-        System.out.println("Los datos en la impresa son :" + this.despacho + this.numeroFax + "el numero de facs");
+    @Override
+    public String toString() {
+        return "Secretario [despacho=" + despacho + ", numeroFax=" + numeroFax + "]";
     }
+    
 }
