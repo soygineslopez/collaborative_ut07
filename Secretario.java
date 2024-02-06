@@ -1,3 +1,7 @@
+package AC001;
+
+import AC001.Empleado;
+
 public class Secretario extends Empleado {
     protected String despacho;
     protected int numeroFax;
