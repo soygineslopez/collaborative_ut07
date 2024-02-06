@@ -1,30 +1,24 @@
-package AC001;
-
-public class Secretario extends Empleado
-{
+public class Secretario extends Empleado {
     protected String despacho;
     protected int numeroFax;
-    protected double salario = (1+0.05)*getAnyosAntiguedad();
 
-    public Secretario(String despacho, int fax)
-    {
+    public Secretario() {
+
+    }
+
+    public Secretario(String nombre, String apellidos, String DNI, String direccion, int telefono, double salario,
+            String despacho, int numeroFax) {
+        super(nombre, apellidos, DNI, direccion, telefono, salario);
         this.despacho = despacho;
-        this.numeroFax = fax;
+        this.numeroFax = numeroFax;
     }
-    public Secretario()
-    {
 
+    @Override
+    public void incrementarSalario(int cantidad) {
+        this.salario = salario + 0.5 * salario;
     }
-    // ---------------------------------------------------------------------------------------------
 
-    public void imprimir()
-    {
-        System.out.println("Nombre y apellidos: " + getNombre() + " " + getApellidos());
-        System.out.println("DNI: " + getDNI());
-        System.out.println("Dirección: " + getDireccion());
-        System.out.println("Años de antiguedad: " + getAnyosAntiguedad());
-        System.out.println("Telefono: " + getTelefono());
-        System.out.println("Salario: " + salario);
-        System.out.println("Supervisor: " + getSupervisor().getNombre());
+    public void imprimirDatos() {
+        System.out.println("Los datos en la impresa son :" + this.despacho + this.numeroFax + "el numero de facs");
     }
 }
