@@ -41,7 +41,9 @@ public class Vendedor extends Empleado{
         this.cocheEmpresa = cocheEmpresa;
     }
 
+    
     public void altaCliente(Clientes cliente){
+        //creamos un nuevo array con la longitud del antigüo(this.clientes) + 1
         Clientes clientes[] = new Clientes[this.clientes.length + 1];
 
         for (int i = 0; i < this.clientes.length; i++) {
