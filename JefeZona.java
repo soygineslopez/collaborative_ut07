@@ -54,9 +54,10 @@ public class JefeZona extends Empleado{
     }
 
     public void cambiarCoche(Coche coche){
-        this.coche = new Coche(coche);
+        this.coche = coche;
     }
 
+    //to-do: rehacer método
     public void bajaVendedor(Vendedor vendedor){
         vendedor = null;
     }
